@@ -17,6 +17,10 @@ struct PureTextNote {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     }()
 
+    static func fileURL(of title: String) -> URL {
+        return self.storageURL.appendingPathComponent("\(title).txt")
+    }
+
     static func titleOfSavedNotes() -> [String] {
         var result = [String]()
         guard let noteURLs = try?
@@ -44,9 +48,12 @@ struct PureTextNote {
     }()
 
     static func open(title: String) throws -> PureTextNote {
-        let fileURL = PureTextNote.storageURL.appendingPathComponent("\(title).txt")
-        let noteContent = try String(contentsOf: fileURL, encoding: .utf8)
+        let noteContent = try String(contentsOf: self.fileURL(of: title), encoding: .utf8)
         return PureTextNote(title: title, content: noteContent)
+    }
+
+    static func remove(title: String) throws {
+        try FileManager.default.removeItem(at: self.fileURL(of: title))
     }
 
     var title: String = {
@@ -61,7 +68,7 @@ struct PureTextNote {
     }()
 
     var fileURL: URL {
-        return PureTextNote.storageURL.appendingPathComponent("\(self.title).txt")
+        return PureTextNote.fileURL(of: self.title)
     }
 
     func save() throws {
