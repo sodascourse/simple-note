@@ -51,7 +51,11 @@ struct PureTextNote {
         let dateString = PureTextNote.fileNameDateFormatter.string(from: date)
         return "Untitled \(dateString)"
     }()
-    var content: String = ""
+    var content: String = {
+        let templatePath = Bundle.main.url(forResource: "template", withExtension: "txt")!
+        guard let templateContent = try? String(contentsOf: templatePath, encoding: .utf8) else { exit(1) }
+        return templateContent
+    }()
 
     var fileURL: URL {
         return PureTextNote.storageURL.appendingPathComponent("\(self.title).txt")

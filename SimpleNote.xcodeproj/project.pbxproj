@@ -12,6 +12,7 @@
 		FE0C50FC1EB5F166008F4A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0C50FB1EB5F166008F4A0E /* Assets.xcassets */; };
 		FE0C50FF1EB5F166008F4A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0C50FD1EB5F166008F4A0E /* LaunchScreen.storyboard */; };
 		FE4F03661EB8A03E00B24F4F /* PureTextNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */; };
+		FEDF9FBD1EB8AD310070F247 /* template.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEDF9FBC1EB8AD310070F247 /* template.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FE0C50FE1EB5F166008F4A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE0C51001EB5F166008F4A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureTextNote.swift; sourceTree = "<group>"; };
+		FEDF9FBC1EB8AD310070F247 /* template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FE0C50F41EB5F166008F4A0E /* AppDelegate.swift */,
 				FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */,
+				FEDF9FBC1EB8AD310070F247 /* template.txt */,
 				FE0C50F81EB5F166008F4A0E /* Main.storyboard */,
 				FE0C50FB1EB5F166008F4A0E /* Assets.xcassets */,
 				FE0C50FD1EB5F166008F4A0E /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				FE0C50FF1EB5F166008F4A0E /* LaunchScreen.storyboard in Resources */,
 				FE0C50FC1EB5F166008F4A0E /* Assets.xcassets in Resources */,
+				FEDF9FBD1EB8AD310070F247 /* template.txt in Resources */,
 				FE0C50FA1EB5F166008F4A0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

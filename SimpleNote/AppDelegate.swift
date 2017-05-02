@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        
+
         print("Notes would be saved in '\(PureTextNote.storageURL.path)'.")
         print("----------------------------")
         let titleList = PureTextNote.titleOfSavedNotes()
