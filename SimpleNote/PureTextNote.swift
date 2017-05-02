@@ -34,6 +34,9 @@ struct PureTextNote {
         /*
          We use date formatter to convert `Date` instances to String
          And then we can use it as the default note name.
+         
+         Usually we would share the instance of `DateFormatter` since
+         it's expensive to create it.
          */
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH-mm-ss"
