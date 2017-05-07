@@ -81,7 +81,9 @@ extension PureTextNote {
         guard let noteURLs = try?
             FileManager.default.contentsOfDirectory(at: PureTextNote.storageURL,
                                                     includingPropertiesForKeys: nil) else { return [] }
+
         for noteURL in noteURLs {
+            guard noteURL.pathExtension == "txt" else { continue }
             result.append(self.title(from: noteURL))
         }
         return result
