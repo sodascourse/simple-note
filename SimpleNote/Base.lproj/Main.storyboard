@@ -52,6 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="t5q-XD-V2N">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="updateTableViewContent:" destination="I77-PE-ot2" eventType="valueChanged" id="Ns4-BD-eGn"/>
@@ -75,9 +76,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bYd-Lb-cpC">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -85,8 +86,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qbe-Gd-wRJ" firstAttribute="top" secondItem="bYd-Lb-cpC" secondAttribute="bottom" id="7wZ-00-FLY"/>
-                            <constraint firstItem="bYd-Lb-cpC" firstAttribute="top" secondItem="EBi-jM-nhJ" secondAttribute="bottom" id="QKx-oJ-tE8"/>
                             <constraint firstAttribute="trailing" secondItem="bYd-Lb-cpC" secondAttribute="trailing" id="WVv-Jf-uWw"/>
+                            <constraint firstItem="bYd-Lb-cpC" firstAttribute="top" secondItem="YVm-Du-PEs" secondAttribute="top" id="Xuz-qe-RHW"/>
                             <constraint firstItem="bYd-Lb-cpC" firstAttribute="leading" secondItem="YVm-Du-PEs" secondAttribute="leading" id="om5-rx-gH9"/>
                         </constraints>
                     </view>
@@ -119,6 +120,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T1N-tC-zm1"/>
+        <segue reference="tEQ-Vx-zfL"/>
     </inferredMetricsTieBreakers>
 </document>
