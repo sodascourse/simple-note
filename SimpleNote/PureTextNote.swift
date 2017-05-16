@@ -23,8 +23,22 @@ struct PureTextNote {
 
     func save() throws {
         try self.content.write(to: self.fileURL, atomically: true, encoding: .utf8)
+        PureTextNote.postDidUpdateNotification()
     }
 
+}
+
+// MARK: - Notification methods
+
+extension Notification.Name {
+    static let PureTextNoteDidUpdate = Notification.Name("PureTextNoteDidUpdate")
+}
+
+extension PureTextNote {
+    fileprivate static func postDidUpdateNotification() {
+        let notification = Notification(name: .PureTextNoteDidUpdate)
+        NotificationQueue.default.enqueue(notification, postingStyle: .asap)
+    }
 }
 
 // MARK: - Storage methods
@@ -96,5 +110,6 @@ extension PureTextNote {
 
     static func remove(title: String) throws {
         try FileManager.default.removeItem(at: self.fileURL(of: title))
+        self.postDidUpdateNotification()
     }
 }

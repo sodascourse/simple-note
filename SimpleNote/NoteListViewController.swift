@@ -21,6 +21,19 @@ class NoteListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateNoteTitles()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(NoteListViewController.pureTextNoteDidUpdate(_:)),
+                                               name: .PureTextNoteDidUpdate,
+                                               object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    func pureTextNoteDidUpdate(_ notification: Notification) {
+        self.updateNoteTitles()
     }
 
     @IBAction func updateTableViewContent(_ sender: UIRefreshControl) {
