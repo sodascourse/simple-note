@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="692" y="116"/>
         </scene>
-        <!--Note-->
+        <!--Note View Controller-->
         <scene sceneID="gfH-JA-G7D">
             <objects>
                 <viewController id="NUH-ie-AVS" customClass="NoteViewController" customModule="SimpleNote" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,12 +91,31 @@
                             <constraint firstItem="bYd-Lb-cpC" firstAttribute="leading" secondItem="YVm-Du-PEs" secondAttribute="leading" id="om5-rx-gH9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Note" id="Wa1-hF-t6i"/>
+                    <navigationItem key="navigationItem" id="Wa1-hF-t6i">
+                        <connections>
+                            <outlet property="titleView" destination="yMt-4a-cvI" id="4oM-HA-Dzq"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="bYd-Lb-cpC" id="HNn-1g-4FO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mwc-Wn-vBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yMt-4a-cvI">
+                    <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Dei-8e-Zpd" appends="YES" id="R5U-mH-mol"/>
+                    </connections>
+                </label>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Dei-8e-Zpd">
+                    <connections>
+                        <action selector="titleDidDoubleClicked:" destination="NUH-ie-AVS" id="7sA-er-URr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1512.8" y="115.59220389805098"/>
         </scene>

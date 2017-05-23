@@ -104,7 +104,7 @@ class NoteListViewController: UITableViewController, NoteViewControllerDelegate 
     func prepareOpeningNote(for segue: UIStoryboardSegue, sender: UITableViewCell) {
         let noteViewController = segue.destination as! NoteViewController
         let senderIndexPath = self.tableView.indexPath(for: sender)!
-        let selectedTitle = self.noteTitles[senderIndexPath.section]
+        let selectedTitle = self.noteTitles[senderIndexPath.row]
         noteViewController.note = try? PureTextNote.open(title: selectedTitle)
         noteViewController.delegate = self
     }
