@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoteListViewController: UITableViewController {
+class NoteListViewController: UITableViewController, NoteViewControllerDelegate {
 
     var noteTitles = [String]() {
         didSet {
@@ -106,11 +106,19 @@ class NoteListViewController: UITableViewController {
         let senderIndexPath = self.tableView.indexPath(for: sender)!
         let selectedTitle = self.noteTitles[senderIndexPath.section]
         noteViewController.note = try? PureTextNote.open(title: selectedTitle)
+        noteViewController.delegate = self
     }
 
     func prepareCreatingNote(for segue: UIStoryboardSegue) {
         let noteViewController = segue.destination as! NoteViewController
         noteViewController.note = PureTextNote()
+        noteViewController.delegate = self
+    }
+
+    // MARK: - NoteViewController Delegate
+
+    func noteViewController(_ noteViewController: NoteViewController, didCloseNote note: PureTextNote) {
+        try? note.save()
     }
 
 }
