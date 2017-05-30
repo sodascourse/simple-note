@@ -16,6 +16,9 @@
 		FE4FBEAA1EBEF981009E8059 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FBEA91EBEF981009E8059 /* NoteListViewController.swift */; };
 		FE4FBEAC1EBEF98F009E8059 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FBEAB1EBEF98F009E8059 /* NoteViewController.swift */; };
 		FEDF9FBD1EB8AD310070F247 /* template.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEDF9FBC1EB8AD310070F247 /* template.txt */; };
+		FEE2F17F1EDD35CE003F6F54 /* SimpleNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2F17E1EDD35CE003F6F54 /* SimpleNote.swift */; };
+		FEE2F1811EDD7A0D003F6F54 /* RemoteNoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2F1801EDD7A0D003F6F54 /* RemoteNoteListViewController.swift */; };
+		FEE2F1831EDD7CA5003F6F54 /* RemoteNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2F1821EDD7CA5003F6F54 /* RemoteNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		FE4FBEAB1EBEF98F009E8059 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		FE66CCD91EDBBAED00F2EA77 /* SimpleNote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNote.entitlements; sourceTree = "<group>"; };
 		FEDF9FBC1EB8AD310070F247 /* template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.txt; sourceTree = "<group>"; };
+		FEE2F17E1EDD35CE003F6F54 /* SimpleNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNote.swift; sourceTree = "<group>"; };
+		FEE2F1801EDD7A0D003F6F54 /* RemoteNoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNoteListViewController.swift; sourceTree = "<group>"; };
+		FEE2F1821EDD7CA5003F6F54 /* RemoteNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +93,8 @@
 			children = (
 				FE66CCD91EDBBAED00F2EA77 /* SimpleNote.entitlements */,
 				FE0C50F41EB5F166008F4A0E /* AppDelegate.swift */,
-				FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */,
-				FE4FBEA91EBEF981009E8059 /* NoteListViewController.swift */,
-				FE4FBEAB1EBEF98F009E8059 /* NoteViewController.swift */,
+				FEE2F1841EDD7CAC003F6F54 /* Local */,
+				FEE2F1851EDD7CB6003F6F54 /* Remote */,
 				FEDF9FBC1EB8AD310070F247 /* template.txt */,
 				FE0C50F81EB5F166008F4A0E /* Main.storyboard */,
 				FE0C50FB1EB5F166008F4A0E /* Assets.xcassets */,
@@ -97,6 +102,26 @@
 				FE0C51001EB5F166008F4A0E /* Info.plist */,
 			);
 			path = SimpleNote;
+			sourceTree = "<group>";
+		};
+		FEE2F1841EDD7CAC003F6F54 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */,
+				FE4FBEA91EBEF981009E8059 /* NoteListViewController.swift */,
+				FE4FBEAB1EBEF98F009E8059 /* NoteViewController.swift */,
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		FEE2F1851EDD7CB6003F6F54 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				FEE2F17E1EDD35CE003F6F54 /* SimpleNote.swift */,
+				FEE2F1801EDD7A0D003F6F54 /* RemoteNoteListViewController.swift */,
+				FEE2F1821EDD7CA5003F6F54 /* RemoteNoteViewController.swift */,
+			);
+			name = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +271,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4FBEAC1EBEF98F009E8059 /* NoteViewController.swift in Sources */,
+				FEE2F1831EDD7CA5003F6F54 /* RemoteNoteViewController.swift in Sources */,
+				FEE2F17F1EDD35CE003F6F54 /* SimpleNote.swift in Sources */,
 				FE4F03661EB8A03E00B24F4F /* PureTextNote.swift in Sources */,
 				FE0C50F51EB5F166008F4A0E /* AppDelegate.swift in Sources */,
+				FEE2F1811EDD7A0D003F6F54 /* RemoteNoteListViewController.swift in Sources */,
 				FE4FBEAA1EBEF981009E8059 /* NoteListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
