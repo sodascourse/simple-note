@@ -21,9 +21,16 @@ struct PureTextNote {
         return PureTextNote.fileURL(of: self.title)
     }
 
-    func save() throws {
-        try self.content.write(to: self.fileURL, atomically: true, encoding: .utf8)
-        PureTextNote.postDidUpdateNotification()
+    func save() {
+        // Use `Dispatch` (part of Foundation) directly
+        // Disk I/O is slow, so we should perform those tasks in background queue
+        DispatchQueue.global(qos: .background).async {
+            try? self.content.write(to: self.fileURL, atomically: true, encoding: .utf8)
+            // We usually post notification or call delegate in main queue
+            DispatchQueue.main.async {
+                PureTextNote.postDidUpdateNotification()
+            }
+        }
     }
 
 }

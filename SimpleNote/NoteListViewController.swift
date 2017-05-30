@@ -118,7 +118,7 @@ class NoteListViewController: UITableViewController, NoteViewControllerDelegate 
     // MARK: - NoteViewController Delegate
 
     func noteViewController(_ noteViewController: NoteViewController, didCloseNote note: PureTextNote) {
-        try? note.save()
+        note.save()
     }
 
 }
