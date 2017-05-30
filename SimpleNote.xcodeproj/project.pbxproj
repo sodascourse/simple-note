@@ -27,6 +27,7 @@
 		FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureTextNote.swift; sourceTree = "<group>"; };
 		FE4FBEA91EBEF981009E8059 /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		FE4FBEAB1EBEF98F009E8059 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		FE66CCD91EDBBAED00F2EA77 /* SimpleNote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleNote.entitlements; sourceTree = "<group>"; };
 		FEDF9FBC1EB8AD310070F247 /* template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +61,7 @@
 		FE0C50F31EB5F166008F4A0E /* SimpleNote */ = {
 			isa = PBXGroup;
 			children = (
+				FE66CCD91EDBBAED00F2EA77 /* SimpleNote.entitlements */,
 				FE0C50F41EB5F166008F4A0E /* AppDelegate.swift */,
 				FE4F03651EB8A03E00B24F4F /* PureTextNote.swift */,
 				FE4FBEA91EBEF981009E8059 /* NoteListViewController.swift */,
@@ -108,6 +110,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = KPFF548763;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -292,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleNote/SimpleNote.entitlements;
 				DEVELOPMENT_TEAM = KPFF548763;
 				INFOPLIST_FILE = SimpleNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -305,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleNote/SimpleNote.entitlements;
 				DEVELOPMENT_TEAM = KPFF548763;
 				INFOPLIST_FILE = SimpleNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
