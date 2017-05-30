@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Async
 
 struct PureTextNote {
 
@@ -97,17 +98,20 @@ extension PureTextNote {
 
     // MARK: I/O
 
-    static func titleOfSavedNotes() -> [String] {
-        var result = [String]()
-        guard let noteURLs = try?
-            FileManager.default.contentsOfDirectory(at: PureTextNote.storageURL,
-                                                    includingPropertiesForKeys: nil) else { return [] }
-
-        for noteURL in noteURLs {
-            guard noteURL.pathExtension == "txt" else { continue }
-            result.append(self.title(from: noteURL))
+    static func getTitleOfSavedNotes(completion: (([String]) -> Void)? = nil) {
+        Async.background {
+            var result = [String]()
+            guard let noteURLs = try? FileManager.default
+                .contentsOfDirectory(at: PureTextNote.storageURL,
+                                     includingPropertiesForKeys: nil) else { return [] }
+            for noteURL in noteURLs {
+                guard noteURL.pathExtension == "txt" else { continue }
+                result.append(self.title(from: noteURL))
+            }
+            return result
+        }.main { result in
+            completion?(result)
         }
-        return result
     }
 
     static func open(title: String) throws -> PureTextNote {

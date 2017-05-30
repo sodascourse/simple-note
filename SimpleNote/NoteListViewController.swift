@@ -37,12 +37,16 @@ class NoteListViewController: UITableViewController, NoteViewControllerDelegate 
     }
 
     @IBAction func updateTableViewContent(_ sender: UIRefreshControl) {
-        self.updateNoteTitles()
-        sender.endRefreshing()
+        self.updateNoteTitles {
+            sender.endRefreshing()
+        }
     }
 
-    func updateNoteTitles() {
-        self.noteTitles = PureTextNote.titleOfSavedNotes()
+    func updateNoteTitles(completion: (() -> Void)? = nil) {
+        PureTextNote.getTitleOfSavedNotes { noteTitles in
+            self.noteTitles = noteTitles
+            completion?()
+        }
     }
 
     // MARK: - Table view data source
