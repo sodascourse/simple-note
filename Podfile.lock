@@ -1,0 +1,12 @@
+PODS:
+  - AsyncSwift (2.0.1)
+
+DEPENDENCIES:
+  - AsyncSwift (~> 2.0)
+
+SPEC CHECKSUMS:
+  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+
+PODFILE CHECKSUM: 2d6bb6a6138a44a741ca6053af82e17685dc64cb
+
+COCOAPODS: 1.2.1

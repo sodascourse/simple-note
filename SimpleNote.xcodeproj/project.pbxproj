@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00E1DE6201ED721824A2E2A /* Pods_SimpleNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAAAEE7923A0A526537522A /* Pods_SimpleNote.framework */; };
 		FE0C50F51EB5F166008F4A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0C50F41EB5F166008F4A0E /* AppDelegate.swift */; };
 		FE0C50FA1EB5F166008F4A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0C50F81EB5F166008F4A0E /* Main.storyboard */; };
 		FE0C50FC1EB5F166008F4A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0C50FB1EB5F166008F4A0E /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBAAAEE7923A0A526537522A /* Pods_SimpleNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0548471FF8F6E1EBB935378 /* Pods-SimpleNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNote/Pods-SimpleNote.debug.xcconfig"; sourceTree = "<group>"; };
+		FC3237498CA8DF3788DC5806 /* Pods-SimpleNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNote/Pods-SimpleNote.release.xcconfig"; sourceTree = "<group>"; };
 		FE0C50F11EB5F166008F4A0E /* SimpleNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0C50F41EB5F166008F4A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE0C50F91EB5F166008F4A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00E1DE6201ED721824A2E2A /* Pods_SimpleNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AC0AE43D58D3E141791C42D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAAAEE7923A0A526537522A /* Pods_SimpleNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA330EE26D54B0DA6BDE03D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0548471FF8F6E1EBB935378 /* Pods-SimpleNote.debug.xcconfig */,
+				FC3237498CA8DF3788DC5806 /* Pods-SimpleNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FE0C50E81EB5F166008F4A0E = {
 			isa = PBXGroup;
 			children = (
 				FE0C50F31EB5F166008F4A0E /* SimpleNote */,
 				FE0C50F21EB5F166008F4A0E /* Products */,
+				AA330EE26D54B0DA6BDE03D3 /* Pods */,
+				6AC0AE43D58D3E141791C42D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,10 +106,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE0C51031EB5F166008F4A0E /* Build configuration list for PBXNativeTarget "SimpleNote" */;
 			buildPhases = (
+				4DCD58CF8900353168108833 /* [CP] Check Pods Manifest.lock */,
 				FE0C51061EB5F192008F4A0E /* Swiftlint */,
 				FE0C50ED1EB5F166008F4A0E /* Sources */,
 				FE0C50EE1EB5F166008F4A0E /* Frameworks */,
 				FE0C50EF1EB5F166008F4A0E /* Resources */,
+				8CF7BCB6C329C449B72EF1D7 /* [CP] Embed Pods Frameworks */,
+				410F5B4BFD4C7E4FDE8ACB8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		410F5B4BFD4C7E4FDE8ACB8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNote/Pods-SimpleNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DCD58CF8900353168108833 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF7BCB6C329C449B72EF1D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNote/Pods-SimpleNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FE0C51061EB5F192008F4A0E /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +369,7 @@
 		};
 		FE0C51041EB5F166008F4A0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0548471FF8F6E1EBB935378 /* Pods-SimpleNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleNote/SimpleNote.entitlements;
@@ -311,6 +384,7 @@
 		};
 		FE0C51051EB5F166008F4A0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC3237498CA8DF3788DC5806 /* Pods-SimpleNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleNote/SimpleNote.entitlements;
